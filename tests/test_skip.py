@@ -5,7 +5,7 @@ from selene import browser
 
 def test_github_desktop(browser_setup):
     if browser.config.window_width < 1000:
-        pytest.skip('Standard test for mobile')
+        pytest.skip('Standard tests for mobile')
     github_page = GithubPage()
     github_page.open()
     github_page.sd_login()
@@ -14,7 +14,7 @@ def test_github_desktop(browser_setup):
 
 def test_github_mobile(browser_setup):
     if browser.config.window_width > 1000:
-        pytest.skip('Test for PC')
+        pytest.skip('Tests for PC')
     github_page = GithubPage()
     github_page.open()
     github_page.mb_login()
