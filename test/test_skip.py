@@ -12,7 +12,6 @@ def test_github_desktop(browser_setup):
     github_page.page_have_text()
 
 
-
 def test_github_mobile(browser_setup):
     if browser.config.window_width > 1000:
         pytest.skip('Test for PC')
